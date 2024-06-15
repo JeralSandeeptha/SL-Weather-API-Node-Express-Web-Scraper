@@ -29,7 +29,7 @@ app.use(bodyParser.json());
 app.use(morgan('dev'));
 
 app.use('/api/v1/weather', weatherRoutes);
-app.use('/api/v1/planets', planetRoutes);
+app.use('/api/v1/planets', planetRoutes); //proxy done
 app.use('/api/v1/locations', locationRoutes);
 app.use('/api/v1/storms', stormRoutes); //proxy done
 app.use('/api/v1/sun', sunRoutes); //proxy done
