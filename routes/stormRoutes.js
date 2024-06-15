@@ -2,9 +2,10 @@ const express = require('express');
 const cheerio = require('cheerio');
 const axios = require('axios');
 
+const PORT = process.env.PORT || 4000;
 const router = express.Router();
 
-const url1 = 'https://www.accuweather.com/en/hurricane';
+const url1 = `http://localhost:${PORT}/accuweather/en/hurricane`;
 
 router.get('/', async (req, res) => {
 

@@ -2,10 +2,11 @@ const express = require('express');
 const cheerio = require('cheerio');
 const axios = require('axios');
 
+const PORT = process.env.PORT || 4000; 
 const router = express.Router();
 
-const url = 'https://www.timeanddate.com/moon/sri-lanka/galle';
-const url1 = 'https://www.timeanddate.com/moon/phases/sri-lanka/galle';
+const url = `http://localhost:${PORT}/timesanddate/moon/sri-lanka/galle`;
+const url1 = `http://localhost:${PORT}/timesanddate/moon/phases/sri-lanka/galle`;
 
 router.get('/', async (req, res) => {
 
