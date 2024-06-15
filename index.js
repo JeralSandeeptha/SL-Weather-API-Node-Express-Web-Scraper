@@ -36,7 +36,7 @@ app.use('/api/v1/sun', sunRoutes); //proxy done
 app.use('/api/v1/moon', moonRoutes); //proxy done
 app.use('/api/v1/eclipses', eclipsesRoutes); //proxy done but need to make controller
 app.use('/api/v1/seasons', seasonsRoutes); //proxy done
-app.use('/api/v1/allergies', allergyRoutes);
+app.use('/api/v1/allergies', allergyRoutes); //proxy done
 app.use('/api/v1/airquality', airQualityRoutes); //proxy done but need to make controller
 
 // Proxy endpoints
