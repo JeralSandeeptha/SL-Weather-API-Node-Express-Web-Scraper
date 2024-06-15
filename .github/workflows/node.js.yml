@@ -8,13 +8,11 @@ on:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
     strategy:
       matrix:
         node-version: [14.x, 16.x, 18.x]
-        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
     - uses: actions/checkout@v4
@@ -27,8 +25,7 @@ jobs:
     - run: npm run build --if-present
 
   docker:
-
-    needs: build  # Ensures the build job completes before this job starts
+    needs: build
     runs-on: ubuntu-latest
 
     steps:
@@ -59,4 +56,4 @@ jobs:
           -H "Authorization: Bearer $RENDER_API_KEY" \
           -H "Content-Type: application/json" \
           -d '{"serviceId": "'"$SERVICE_ID"'"}' \
-          https://api.render.com/v1/services/YOUR_SERVICE_ID/deploys
+          https://api.render.com/v1/services/$SERVICE_ID/deploys
