@@ -133,7 +133,7 @@ router.get('/centrallocations1', async (req, res) => {
                 let dtime = $(el).find('div[class="cur-con-weather-card__body"] > div[class="cur-con-weather-card__panel"] > p[class="cur-con-weather-card__subtitle"]').text().replace(/\n|\t/g, "");
                 let dtemp = $(el).find('div[class="cur-con-weather-card__body"] > div[class="cur-con-weather-card__panel"] > div[class="forecast-container"] > div[class="temp-container"] > div[class="temp"]').text();
 
-                let dRealFeel = $(el).find('div[class="cur-con-weather-card__body"] > div[class="cur-con-weather-card__panel"] > div[class="forecast-container"] > div[class="temp-container"] > div[class="real-feel"]').text().replace(/\n|\t/g, "");
+                let dRealFeel = $(el).find('div[class="cur-con-weather-card__body"] > div[class="cur-con-weather-card__panel"] > div[class="forecast-container"] > div[class="temp-container"] > div[class="real-feel"]').text().replace(/[\n\t]/g, "");
 
                 let dstatus = $(el).find('div[class="spaced-content"] > span[class="phrase"]').text();
 
@@ -251,7 +251,7 @@ router.get('/centrallocations2', async (req, res) => {
                 let dtime = $(el).find('div[class="cur-con-weather-card__body"] > div[class="cur-con-weather-card__panel"] > p[class="cur-con-weather-card__subtitle"]').text().replace(/\n|\t/g, "");
                 let dtemp = $(el).find('div[class="cur-con-weather-card__body"] > div[class="cur-con-weather-card__panel"] > div[class="forecast-container"] > div[class="temp-container"] > div[class="temp"]').text();
 
-                let dRealFeel = $(el).find('div[class="cur-con-weather-card__body"] > div[class="cur-con-weather-card__panel"] > div[class="forecast-container"] > div[class="temp-container"] > div[class="real-feel"]').text().replace(/\n|\t/g, "");
+                let dRealFeel = $(el).find('div[class="cur-con-weather-card__body"] > div[class="cur-con-weather-card__panel"] > div[class="forecast-container"] > div[class="temp-container"] > div[class="real-feel"]').text().replace(/[\n\t]/g, "");
 
                 let dstatus = $(el).find('div[class="spaced-content"] > span[class="phrase"]').text();
 
@@ -482,7 +482,7 @@ router.get('/easternlocations1', async (req, res) => {
                 let dtime = $(el).find('div[class="cur-con-weather-card__body"] > div[class="cur-con-weather-card__panel"] > p[class="cur-con-weather-card__subtitle"]').text().replace(/\n|\t/g, "");
                 let dtemp = $(el).find('div[class="cur-con-weather-card__body"] > div[class="cur-con-weather-card__panel"] > div[class="forecast-container"] > div[class="temp-container"] > div[class="temp"]').text();
 
-                let dRealFeel = $(el).find('div[class="cur-con-weather-card__body"] > div[class="cur-con-weather-card__panel"] > div[class="forecast-container"] > div[class="temp-container"] > div[class="real-feel"]').text().replace(/\n|\t/g, "");
+                let dRealFeel = $(el).find('div[class="cur-con-weather-card__body"] > div[class="cur-con-weather-card__panel"] > div[class="forecast-container"] > div[class="temp-container"] > div[class="real-feel"]').text().replace(/[\n\t]/g, "");
 
                 let dstatus = $(el).find('div[class="spaced-content"] > span[class="phrase"]').text();
 
@@ -599,7 +599,7 @@ router.get('/easternlocations2', async (req, res) => {
                 let dtime = $(el).find('div[class="cur-con-weather-card__body"] > div[class="cur-con-weather-card__panel"] > p[class="cur-con-weather-card__subtitle"]').text().replace(/\n|\t/g, "");
                 let dtemp = $(el).find('div[class="cur-con-weather-card__body"] > div[class="cur-con-weather-card__panel"] > div[class="forecast-container"] > div[class="temp-container"] > div[class="temp"]').text();
 
-                let dRealFeel = $(el).find('div[class="cur-con-weather-card__body"] > div[class="cur-con-weather-card__panel"] > div[class="forecast-container"] > div[class="temp-container"] > div[class="real-feel"]').text().replace(/\n|\t/g, "");
+                let dRealFeel = $(el).find('div[class="cur-con-weather-card__body"] > div[class="cur-con-weather-card__panel"] > div[class="forecast-container"] > div[class="temp-container"] > div[class="real-feel"]').text().replace(/[\n\t]/g, "");
 
                 let dstatus = $(el).find('div[class="spaced-content"] > span[class="phrase"]').text();
 
@@ -822,7 +822,7 @@ router.get('/northcentrallocations1', async (req, res) => {
                 let dtime = $(el).find('div[class="cur-con-weather-card__body"] > div[class="cur-con-weather-card__panel"] > p[class="cur-con-weather-card__subtitle"]').text().replace(/\n|\t/g, "");
                 let dtemp = $(el).find('div[class="cur-con-weather-card__body"] > div[class="cur-con-weather-card__panel"] > div[class="forecast-container"] > div[class="temp-container"] > div[class="temp"]').text();
 
-                let dRealFeel = $(el).find('div[class="cur-con-weather-card__body"] > div[class="cur-con-weather-card__panel"] > div[class="forecast-container"] > div[class="temp-container"] > div[class="real-feel"]').text().replace(/\n|\t/g, "");
+                let dRealFeel = $(el).find('div[class="cur-con-weather-card__body"] > div[class="cur-con-weather-card__panel"] > div[class="forecast-container"] > div[class="temp-container"] > div[class="real-feel"]').text().replace(/[\n\t]/g, "");
 
                 let dstatus = $(el).find('div[class="spaced-content"] > span[class="phrase"]').text();
 
@@ -969,7 +969,7 @@ router.get('/northcentrallocations2', async (req, res) => {
             $('div[class="air-quality-card content-module"] > div[class="air-quality-content"]').each( (item, el) => {
                 let dtime = $(el).find('div[class="date-wrapper"] > p[class="date"]').text();
                 let dstatus = $(el).find('div[class="content-wrapper"] > div[class="air-quality-data-wrapper"] > h3[class="air-quality-data"] > p[class="category-text"]').text();
-                let ddescription = $(el).find('div[class="content-wrapper"] > div[class="air-quality-data-wrapper"] > h3[class="air-quality-data"] > p[class="statement"]').text().replace(/\n|\t/g, "");
+                let ddescription = $(el).find('div[class="content-wrapper"] > div[class="air-quality-data-wrapper"] > h3[class="air-quality-data"] > p[class="statement"]').text().replace(/[\n\t]/g, "");
                 airQuality.date = dtime;
                 airQuality.status = dstatus;
                 airQuality.description = ddescription;
@@ -1164,7 +1164,7 @@ router.get('/northwesternlocations1', async (req, res) => {
                 let dtime = $(el).find('div[class="cur-con-weather-card__body"] > div[class="cur-con-weather-card__panel"] > p[class="cur-con-weather-card__subtitle"]').text().replace(/\n|\t/g, "");
                 let dtemp = $(el).find('div[class="cur-con-weather-card__body"] > div[class="cur-con-weather-card__panel"] > div[class="forecast-container"] > div[class="temp-container"] > div[class="temp"]').text();
 
-                let dRealFeel = $(el).find('div[class="cur-con-weather-card__body"] > div[class="cur-con-weather-card__panel"] > div[class="forecast-container"] > div[class="temp-container"] > div[class="real-feel"]').text().replace(/\n|\t/g, "");
+                let dRealFeel = $(el).find('div[class="cur-con-weather-card__body"] > div[class="cur-con-weather-card__panel"] > div[class="forecast-container"] > div[class="temp-container"] > div[class="real-feel"]').text().replace(/[\n\t]/g, "");
 
                 let dstatus = $(el).find('div[class="spaced-content"] > span[class="phrase"]').text();
 
@@ -1193,7 +1193,7 @@ router.get('/northwesternlocations1', async (req, res) => {
             $('div[class="air-quality-card content-module"] > div[class="air-quality-content"]').each( (item, el) => {
                 let dtime = $(el).find('div[class="date-wrapper"] > p[class="date"]').text();
                 let dstatus = $(el).find('div[class="content-wrapper"] > div[class="air-quality-data-wrapper"] > h3[class="air-quality-data"] > p[class="category-text"]').text();
-                let ddescription = $(el).find('div[class="content-wrapper"] > div[class="air-quality-data-wrapper"] > h3[class="air-quality-data"] > p[class="statement"]').text().replace(/\n|\t/g, "");
+                let ddescription = $(el).find('div[class="content-wrapper"] > div[class="air-quality-data-wrapper"] > h3[class="air-quality-data"] > p[class="statement"]').text().replace(/[\n\t]/g, "");
                 airQuality.date = dtime;
                 airQuality.status = dstatus;
                 airQuality.description = ddescription;

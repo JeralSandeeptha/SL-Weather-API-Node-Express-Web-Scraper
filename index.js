@@ -39,6 +39,12 @@ app.use('/api/v1/seasons', seasonsRoutes); //proxy done
 app.use('/api/v1/allergies', allergyRoutes); //proxy done
 app.use('/api/v1/airquality', airQualityRoutes); //proxy done but need to make controller
 
+app.get('/', (req, res) => {
+    res.status(200).json({
+        message: 'This is SL Weather Station Official Website'
+    });
+});
+
 // Proxy endpoints
 app.use('/timesanddate', createProxyMiddleware({
     target: API_SERVICE_URL,
