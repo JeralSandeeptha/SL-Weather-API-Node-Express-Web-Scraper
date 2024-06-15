@@ -2,9 +2,10 @@ const express = require('express');
 const cheerio = require('cheerio');
 const axios = require('axios');
 
+const PORT = process.env.PORT || 4000;
 const router = express.Router();
 
-const url = 'https://weather.com/forecast/air-quality/l/2e7e4387ec7c77787780f685cf56e85c902235f12b815f56bccce92741840e89';
+const url = `http://localhost:${PORT}/weather/forecast/air-quality/l/2e7e4387ec7c77787780f685cf56e85c902235f12b815f56bccce92741840e89`;
 
 router.get('/', async (req, res) => {
 

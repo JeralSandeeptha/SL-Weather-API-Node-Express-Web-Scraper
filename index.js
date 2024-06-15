@@ -22,6 +22,7 @@ const app = express();
 const PORT = process.env.PORT || 4000; 
 const API_SERVICE_URL = "https://www.timeanddate.com/";
 const API_SERVICE_URL_ACCU = "https://www.accuweather.com/";
+const API_SERVICE_URL_WEATH = "https://weather.com/";
 
 app.use(cors());
 app.use(bodyParser.json());
@@ -36,7 +37,7 @@ app.use('/api/v1/moon', moonRoutes); //proxy done
 app.use('/api/v1/eclipses', eclipsesRoutes); //proxy done but need to make controller
 app.use('/api/v1/seasons', seasonsRoutes); //proxy done
 app.use('/api/v1/allergies', allergyRoutes);
-app.use('/api/v1/airquality', airQualityRoutes);
+app.use('/api/v1/airquality', airQualityRoutes); //proxy done but need to make controller
 
 // Proxy endpoints
 app.use('/timesanddate', createProxyMiddleware({
@@ -51,6 +52,13 @@ app.use('/accuweather', createProxyMiddleware({
     changeOrigin: true,
     pathRewrite: {
         [`^/accuweather`]: '',
+    },
+}));
+app.use('/weather', createProxyMiddleware({
+    target: API_SERVICE_URL_WEATH,
+    changeOrigin: true,
+    pathRewrite: {
+        [`^/weather`]: '',
     },
 }));
 
