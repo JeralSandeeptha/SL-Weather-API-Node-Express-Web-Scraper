@@ -2,20 +2,21 @@ const express = require('express');
 const axios  = require('axios');
 const cheerio  = require('cheerio');
 
+const PORT = process.env.PORT || 4000;
 const router = express.Router();
 
 //for Sri Lanka Different Weather 10 Locations
 const urls = [
-    'https://www.timeanddate.com/weather/sri-lanka/colombo',
-    'https://www.timeanddate.com/weather/sri-lanka/galle',
-    'https://www.timeanddate.com/weather/sri-lanka/batticaloa',
-    'https://www.timeanddate.com/weather/sri-lanka/badulla',
-    'https://www.timeanddate.com/weather/sri-lanka/jaffna',
-    'https://www.timeanddate.com/weather/sri-lanka/kalmunai',
-    'https://www.timeanddate.com/weather/sri-lanka/kurunegala',
-    'https://www.timeanddate.com/weather/sri-lanka/trincomalee',
-    'https://www.timeanddate.com/weather/sri-lanka/sri-jayawardenapura-kotte',
-    'https://www.timeanddate.com/weather/sri-lanka/kandy' 
+    `http://localhost:${PORT}/timesanddate/weather/sri-lanka/colombo`,
+    `http://localhost:${PORT}/timesanddate/weather/sri-lanka/galle`,
+    `http://localhost:${PORT}/timesanddate/weather/sri-lanka/batticaloa`,
+    `http://localhost:${PORT}/timesanddate/weather/sri-lanka/badulla`,
+    `http://localhost:${PORT}/timesanddate/weather/sri-lanka/jaffna`,
+    `http://localhost:${PORT}/timesanddate/weather/sri-lanka/kalmunai`,
+    `http://localhost:${PORT}/timesanddate/weather/sri-lanka/kurunegala`,
+    `http://localhost:${PORT}/timesanddate/weather/sri-lanka/trincomalee`,
+    `http://localhost:${PORT}/timesanddate/weather/sri-lanka/sri-jayawardenapura-kotte`,
+    `http://localhost:${PORT}/timesanddate/weather/sri-lanka/kandy` 
 ];
 
 router.get('/mainLocations', async (req, res) => {
@@ -251,7 +252,7 @@ router.get('/mainLocations', async (req, res) => {
 })
 
 //for Sri Lanka Whole Weather
-const slurl = 'https://www.timeanddate.com/weather/sri-lanka';
+const slurl = `http://localhost:${PORT}/timesanddate/weather/sri-lanka`;
 
 router.get('/sriLanka', async (req, res) => {
 
