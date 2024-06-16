@@ -19,6 +19,7 @@
     "http-proxy-middleware": "^3.0.0",
     "mongoose": "^7.0.3",
     "morgan": "^1.10.0",
+    "node-fetch": "^3.3.2",
     "nodemon": "^2.0.22",
     "zipkin": "^0.22.0",
     "zipkin-context-cls": "^0.22.0",
